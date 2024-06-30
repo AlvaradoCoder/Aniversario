@@ -39,7 +39,7 @@ body {
 
 .flower-text {
   position: absolute;
-  top: 50px; /* Ajusta la distancia desde el borde superior según sea necesario */
+  top: 45px; /* Ajusta la distancia desde el borde superior según sea necesario */
   color: white;
   font-size: 4vw; /* Tamaño de fuente flexible basado en el ancho de la pantalla */
   max-width: 99%; /* Asegura que el texto no ocupe más del 99% del ancho de la pantalla */
