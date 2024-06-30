@@ -37,22 +37,39 @@ body {
   rgb(240, 240, 240));
 }
 
-.flower-text {
-  position: absolute; /* Posición absoluta para colocar el texto sobre las flores */
-  top: 10px; /* Ajusta según sea necesario para alejar el texto del borde superior */
-  left: 50%;
-  transform: translateX(-50%); /* Centra el texto horizontalmente */
-  color: white;
-  font-size: 24px; /* Ajusta según sea necesario */
-  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 100; /* Asegúrate de que el texto esté por encima de otros elementos */
-  text-align: center;
+.container {
+  position: relative;
 }
 
-.container {
-  position: relative; /* Para que el texto se posicione correctamente dentro del contenedor */
+.flower-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 4vw; /* Tamaño de fuente basado en el ancho de la pantalla */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2vw; /* Espaciado relativo al ancho de la pantalla */
+  border-radius: 5px;
+  z-index: 100;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .flower-text {
+    font-size: 5vw; /* Tamaño ajustado para tablets y móviles grandes */
+    padding: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .flower-text {
+    font-size: 6vw; /* Tamaño ajustado para móviles pequeños */
+    padding: 4vw;
+  }
 }
 
 .flowers {
