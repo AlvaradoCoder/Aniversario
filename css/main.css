@@ -74,6 +74,7 @@ body {
 .flowers {
   position: relative;
   transform: scale(0.9);
+  top: -100px;
 }
 
 .flores::before {
