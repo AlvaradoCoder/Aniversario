@@ -37,40 +37,42 @@ body {
   rgb(240, 240, 240));
 }
 
-.container {
-  position: relative;
-}
-
 .flower-text {
   position: absolute;
-  top: 10px;
+  top: 10px; /* Ajusta la distancia desde el borde superior según sea necesario */
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-size: 4vw; /* Tamaño de fuente basado en el ancho de la pantalla */
+  font-size: 4vw; /* Tamaño de fuente flexible basado en el ancho de la pantalla */
+  max-width: 90%; /* Asegura que el texto no ocupe más del 90% del ancho de la pantalla */
   background: rgba(0, 0, 0, 0.6);
-  padding: 2vw; /* Espaciado relativo al ancho de la pantalla */
+  padding: 1rem;
   border-radius: 5px;
   z-index: 100;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: pre-wrap; /* Mantiene los saltos de línea */
+  overflow-wrap: break-word; /* Rompe palabras largas si es necesario */
+  word-wrap: break-word; /* Soporte adicional para el ajuste de palabras */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra alrededor del texto para mejorar la visibilidad */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Opcional: Agrega un borde sutil alrededor del texto */
 }
 
+/* Ajustes para pantallas medianas */
 @media (max-width: 768px) {
   .flower-text {
-    font-size: 5vw; /* Tamaño ajustado para tablets y móviles grandes */
-    padding: 3vw;
+    font-size: 5vw; /* Tamaño de fuente para pantallas medianas */
+    padding: 1.5rem; /* Ajusta el espaciado interno */
   }
 }
 
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
   .flower-text {
-    font-size: 6vw; /* Tamaño ajustado para móviles pequeños */
-    padding: 4vw;
+    font-size: 6vw; /* Tamaño de fuente para pantallas pequeñas */
+    padding: 2rem; /* Ajusta el espaciado interno */
   }
 }
+
 
 .flowers {
   position: relative;
