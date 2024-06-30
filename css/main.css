@@ -40,8 +40,6 @@ body {
 .flower-text {
   position: absolute;
   top: 10px; /* Ajusta la distancia desde el borde superior según sea necesario */
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
   font-size: 4vw; /* Tamaño de fuente flexible basado en el ancho de la pantalla */
   max-width: 90%; /* Asegura que el texto no ocupe más del 90% del ancho de la pantalla */
@@ -50,7 +48,6 @@ body {
   border-radius: 5px;
   z-index: 100;
   text-align: center;
-  white-space: pre-wrap; /* Mantiene los saltos de línea */
   overflow-wrap: break-word; /* Rompe palabras largas si es necesario */
   word-wrap: break-word; /* Soporte adicional para el ajuste de palabras */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra alrededor del texto para mejorar la visibilidad */
